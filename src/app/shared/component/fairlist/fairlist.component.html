@@ -1,0 +1,39 @@
+
+<div class="cardclick">
+
+    <div class="card bg-light mb-4"  (click)="onclickCard()" [class.active]>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-2">
+                    <a href="javascript:;">
+                       <img src="./../assets/images/favicon.png" alt="issIcon" class="iconImg"> 
+                    </a>
+                </div>
+                <div class="col-sm-10">
+                    <h5>{{getObjFromCard.fairName}}</h5>
+                
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="text-secondary" href="#"><i class="ml-2 fas fa-calendar-alt"></i></a>
+                          <span>{{getObjFromCard.startDate | date}} - </span>
+                            <span>{{getObjFromCard.endDate | date}}</span>
+                        </li>
+                        <li class="nav-item">
+                          <a class=" text-info h6 ml-4" href="#">Add to calender</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="text-secondary" href="#"><i class="ml-2 fas fa-map-marker-alt"></i></a>
+                          {{getObjFromCard.type}}
+                        </li>
+                        <li class="nav-item">
+                          <a class="text-secondary"><i class="ml-2 fas fa-cash-register"></i></a>
+                         {{getObjFromCard.numberOfSchoolsRegistered}}Registered
+                        </li>
+                      </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   </div>
+  

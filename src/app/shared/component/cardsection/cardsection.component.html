@@ -1,0 +1,4 @@
+
+<!-- <app-fairlist [getObjFromCard]="obj" *ngFor="let obj of getArr" (sendObjId)="sendObjIdTocard($event)"></app-fairlist> -->
+<app-fairlist [getObjFromCard]="obj" *ngFor="let obj of getArr" (click)="sendObjIdTocard(obj.fairId)"></app-fairlist>
+

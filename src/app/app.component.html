@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-navbar></app-navbar>
+        </div>
+    </div>
+</div>
+
+
+<app-header></app-header>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-5 mb-4">
+            <h3 class="mb-4">Upcoming Fairs and ifairs</h3>
+            <app-cardsection [getArr]="cardInfo" (sendIdToParent) = "getFairId($event)"></app-cardsection> 
+        </div>
+        <div class="col-md-7">
+            <app-card-details [sendIdToChild]="getDaitels" ></app-card-details>
+         </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

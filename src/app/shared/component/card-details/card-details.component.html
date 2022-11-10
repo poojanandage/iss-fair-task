@@ -1,0 +1,63 @@
+<div class=" card text-white ">
+    <div class="cardImg">
+      <img [src]="sendIdToChild.bannerUrl" class=" img-fluid" alt="...">
+    </div>
+    <div class="info">
+      <h5 class="h2">{{sendIdToChild.fairName}}</h5>
+      <p class="h5"><span>{{sendIdToChild.startDate | date}} - {{sendIdToChild.endDate | date}}</span>
+      </p>
+      <button class="btn btn-outline-info bg-light">Upgrade to Register for fair</button>
+    </div>
+  </div>
+
+ 
+    <div class="row cardBody mt-5">
+        <div class="col-4">
+          <div class="cardDetail p-2 py-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item text-secondary h5">
+                        <i class="mr-2 fas fa-calendar-alt"></i>Date
+                    </li>
+                    <li class="nav-item">
+                      {{sendIdToChild.startDate | date}}
+                    </li>
+                    <li class="nav-item">
+                      {{sendIdToChild.startDate | date}}
+                    </li>
+                    <li class="nav-item">
+                      {{sendIdToChild.fairStartTime}} - {{sendIdToChild.fairEndTime}}
+                    </li>
+                    <li class="nav-item">
+                      {{sendIdToChild.timezoneId}}
+                    </li>
+                    <li class="nav-item">
+                        <a class=" text-info h6 my-4 d-block" href="#">Add To Calender</a>
+                      </li>
+                    <li class="nav-item text-secondary h6">
+    
+                      Last Registration Date
+                    </li>
+                    <li class="nav-item">
+                       
+                      {{sendIdToChild.endDate}}
+                     
+                    </li>
+                  </ul>
+            </div>
+          </div>
+          <div class="col-4 ml-3">
+            <div class="cardDetail p-2 py-4">
+               <div>
+                <a href="#" class="text-secondary  h5 d-block"><i class="fas fa-map-marker-alt mr-2"></i>Location</a>
+               </div>
+                <div class="lockIcon d-flex justify-content-center align-item-center"><img src="./../../../../assets/images/lockIcon.png" alt="lockIcon" class="mt-5"></div>
+            </div>
+        </div>
+      </div>
+
+<div class="mt-5">
+  <h4 class="my-5">Description</h4>
+  <div class="discription" [innerHTML]="sendIdToChild.candidateDescription">
+  </div>
+</div>
+      
